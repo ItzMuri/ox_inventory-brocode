@@ -9,8 +9,8 @@ $secondaryColorDark: rgba(12, 12, 12, 0.8);
 
 $gridCols: 5;
 $gridRows: 4;
-$gridSize: 11.2vh;
-$gridGap: 0.166vw;
+$gridSize: 10.1vh;
+$gridGap: 0.266vw;
 $containerSize: calc(#{$gridRows} * #{$gridSize + 0.22vh} + #{$gridRows} * #{$gridGap});
 
 body {
@@ -56,43 +56,34 @@ input[type='number']::-webkit-outer-spin-button {
 }
 
 .context-menu-list {
-  min-width: 5.208vw;
-  background-color: rgba(15, 7, 39);
+  min-width: 100px;
   color: $textColor;
-  padding: 0.208vw;
-  border-color: rgba(0, 0, 0, 0.2);
-  border-style: inset;
-  border-width: 0.052vw;
-  border-radius: 0.208vw;
+  padding: 4px;
+  gap: 4px;
   outline: none;
   display: flex;
   flex-direction: column;
-  align-items: center;
 }
 
-.context-menu-item  {
-  padding: 0.417vw;
-  border-radius: 0.208vw;
-  background-color: transparent;
+.context-menu-item {
+  padding: 9px;
+  border-radius: calc(0.092592592vh * 0);
+  background: rgb(32, 32, 32);
+  border: 1px solid rgba(55, 55, 55, 1);
+  box-shadow: 0 0 1vh rgba(0, 0, 0, 0.3);
   outline: none;
-  border: none;
-  font-family: 'Smooch Sans', sans-serif;
-  font-size: 1vw;
-  color: white;
-  opacity: 0.9;
+  color: $textColor;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  font-weight: 500;
-  transition: all 50ms ease-in-out;
   &:active {
     transform: none;
   }
   &:hover {
-    transition: all 50ms ease-in-out;
+    background:rgba(0, 248, 185, 0.22);
+    border: calc(0.092592592vh * 1.4) solid rgba(255, 255, 255, 0.15);
+    border-radius: calc(0.092592592vh * 0);
     cursor: pointer;
-    transform: scale(1.1);
-    align-items: center;
   }
 }
 
@@ -128,8 +119,8 @@ button:active {
   justify-content: center;
   align-items: center;
   height: 100%;
-  background-image: linear-gradient(132deg, rgba(15, 13, 59, 0.72) 0%, rgba(15,13,59,0.12172619047619047) 50%, rgba(15,13,59,0.72) 100%);
-  gap: 1.742vw;
+  background: rgba(12, 14, 18, 0.95);
+  gap: 2.742vw;
 }
 
 .inventory-control {
@@ -141,25 +132,31 @@ button:active {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    top: 21vh;
-    left: 10vw;
+    top: 17.45vh;
+    left: 4.5vw;
   }
 
   .inventory-control-input {
     transition: 200ms;
-    padding: 0.533vw;
-    width: 1.5vw;
-    border-radius: 0.5vw;
+    padding: 0.33vw;
+    width: 5.1vw;
     position: absolute;
     font-family: $mainFont;
     font-size: 0.933vw;
     text-align: center;
     outline: none;
-    border: none;
     color: #fff;
-    background-color: $secondaryColor;
+    
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.089) 0%, rgba(77, 79, 87, 0.177) 100%);
+    border-style: solid;
+    border-width: 0.11rem;
+    border-color: rgba(110, 110, 119, 0.925);
+
     &:hover {
-      background-color: $secondaryColorDark;
+      box-shadow: 0.0rem 0.0rem 50px 5px #31d4a896 inset;
+      border-style: solid;
+      border-width: 0.11rem;
+      border-color: rgba(110, 110, 119, 0.925);
     }
   }
 
@@ -307,16 +304,33 @@ button:active {
 
 // inventory slots
 .inventory-slot {
-  background-color: $secondaryColor;
+  background: rgba(110, 110, 110, 0.158);
+  border: 1px solid rgba(55, 55, 55, 1);
+  box-shadow: 0.0rem 0.0rem 50px 5px rgba(10, 10, 10, 0.808) inset ;
   background-repeat: no-repeat;
   background-position: center;
-  border-radius: 0.5vh;
+  border-radius: 0.5rem;
   image-rendering: -webkit-optimize-contrast;
   position: relative;
-  background-size: 7vh;
-  color: #fff;
-  border: 0.052vw solid #ffffff17;
+  background-size: 5.1vh;
+  color: $textColor;
+  animation: zoomOutAndShake 0.7s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+  &:hover {
+    box-shadow: 0.0rem 0.0rem 50px 5px #31d4a896 inset;
+    border: calc(0.092592592vh * 1.4) solid rgba(0, 248, 185, 0.22);
+    border-radius: 0.5rem;
+  }
 }
+
+@keyframes zoomOutAndShake {
+    0% {
+        transform: scale(0);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
 
 .inventory-slot-label-box {
   color: #fff;
@@ -330,10 +344,10 @@ button:active {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  padding: 0.104vw 0.156vw;
-  font-weight: 500;
+  padding: 0.124vw 0.258vw;
+  font-weight: 300;
   text-align: left;
-  font-size: 0.9vw;
+  font-size: 0.7vw;
   text-shadow: 0.052vw 0.104vw 0.521vw #ffffff4d,-0.104vw 0.052vw 0.521vw #ffffff37;
   opacity: 0.9;
   display: flex;
@@ -346,18 +360,16 @@ button:active {
 }
 
 .inventory-slot-number {
+  background-color: rgb(0, 94, 73);
+  box-shadow: 0 0 1vh #03b89a59;
+  border: 1px solid #00ffdd54;
   color: rgb(255, 255, 255);
-  height: 1.4vw;
-  width: 1.4vw;
-  text-align: center;
-  border-top-left-radius: 0.25vh;
-  border-bottom-right-radius: 0.25vh;
-  margin-left: 0.2vw;
-  margin-top: 0.2vw;
-  font-size: 1.198vw;
-  background-color: rgba(15, 7, 39, 0.816);
-  border-radius: 100vw;
-  font-weight: 600;
+  height: 12px;
+  border-radius: 0.25vh;
+  border-top-left-radius: 0.5rem;
+  padding: 3px;
+  font-size: 12px;
+  font-family: $mainFont;
 }
 
 .item-slot-wrapper {
@@ -416,20 +428,17 @@ button:active {
 .tooltip-wrapper {
   pointer-events: none;
   display: flex;
-  background-color: rgba(15, 7, 39, 0.716);
-  width: 13.021vw;
-  padding: 0.417vw;
+  width: 200px;
+  padding: 8px;
   flex-direction: column;
-  min-width: 10.417vw;
-  color: $textColor;
-  
-  border-radius: 0.208vw;
-  border-color: rgba(255,255,255, 0.2);
-  border-style: inset;
-  border-width: 0.052vw;
+  min-width: 200px;
+  color:white;
+  font-family: $mainFont;
+  background: rgba(41, 41, 41, 0.712);
+  border: 1px solid rgba(55, 55, 55, 1);
   p {
-    font-size: 1.042vw;
-    font-weight: 300;
+    font-size: 12px;
+    font-weight: 400;
   }
 }
 
@@ -538,12 +547,11 @@ button:active {
 }
 
 .durability-bar {
-  height: 2.4vh;
+  height: 1.4vh;
   overflow: hidden;
 }
 
 .weight-bar {
-  
   height: 3.5vh;
   margin-top: -0.5vh;
   margin-left: 0.2vh;
@@ -587,7 +595,7 @@ button:active {
 }
 .group .overlap-group {
   height: 36vw;
-  width: 27vw;
+  width: 15vw;
   position: relative;
 }
 

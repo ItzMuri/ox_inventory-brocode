@@ -65,13 +65,12 @@ const InventoryGrid: React.FC<{ inventory: Inventory }> = ({ inventory }) => {
             {inventory.label}
           </p> */}
           <div style={inventory.type === "player" ? {
-            writingMode: 'vertical-lr',
             textOrientation: 'mixed',
             position: 'absolute',
-            fontSize: '2.5vw',
+            fontSize: '2vw',
             display: 'flex',
-            marginTop: '2vw',
-            marginLeft: '-2.5vw',
+            marginTop: '-0.2vw',
+            marginLeft: '0vw',
             letterSpacing: '0.1rem',
           } : {
 
