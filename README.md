@@ -1,14 +1,17 @@
-<h1 align="center"><a href="https://discord.gg/brocode" target="_blank" rel="noopener noreferrer">ox_inventory customized by Bro Code</a></h1>
 
-This inventory is a fork from the original ox_inventory. This fork is customized by Bro Code and we will try our best to maintain it. We have added features like Body Stats System and Completely changed the Design of the Inventory. Rest of the features are same as the original ox_inventory. It has a dependency of **BC_Wounding** for the Body Stats System. You can find the **BC_Wounding** resource [here](https://brocode.tebex.io/package/6121826)
+
+# dependency 
+[BC_Wounding](https://brocode.tebex.io/package/6121826)
 
 ## Preview
-*(Video Preview Soon)*
-<div align='center'><img src='https://cdn.discordapp.com/attachments/1188413681655095316/1197824528739487754/image.png'/></div>
+- ![image](https://github.com/ItzMuri/ox_inventory-brocode/assets/88394932/a34cc0ef-b113-4f27-aea8-87e1882fc908)
+
+- ![image](https://github.com/ItzMuri/ox_inventory-brocode/assets/88394932/3e315554-8e77-4f5d-b4c5-d6a3ab847aaf)
+
+- ![image](https://github.com/ItzMuri/ox_inventory-brocode/assets/88394932/0d87b8e8-9216-49d2-a809-8952d9519008)
 
 #
 
-<div align='center'><img src='https://user-images.githubusercontent.com/65407488/147992899-93998c0a-75fb-4055-8c06-8da8c49342d6.png'/>
 <h2><a href='https://overextended.dev/ox_inventory'>Documentation</a></h3></div>
 
 ## Config
@@ -64,11 +67,6 @@ Logging is built-in using ox_lib's [logger](https://overextended.dev/ox_lib/Modu
 - Vehicle gloveboxes and trunks, for both owned and unowned.
 
 ### Temporary stashes
-
-- Dumpsters, drops, and non-player vehicles.
-- Loot tables allow users to find random items in dumpsters and unowned vehicles.
-
-<br><div><h4 align='center'><a href='https://discord.gg/hmcmv3P7YW'>Discord Server</a></h4></div><br>
 
 <table><tr><td><h3 align='center'>License</h3></tr></td>
 <tr><td>
