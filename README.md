@@ -1,4 +1,7 @@
-
+you have to build to use this
+- cd ox_inventory/web
+- pnpm i
+- pnpm build
 
 # dependency 
 [BC_Wounding](https://brocode.tebex.io/package/6121826)
