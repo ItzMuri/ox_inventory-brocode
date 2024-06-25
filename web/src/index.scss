@@ -9,7 +9,7 @@ $secondaryColorDark: rgba(12, 12, 12, 0.8);
 
 $gridCols: 5;
 $gridRows: 4;
-$gridSize: 10.1vh;
+$gridSize: 10.2vh;
 $gridGap: 0.266vw;
 $containerSize: calc(#{$gridRows} * #{$gridSize + 0.22vh} + #{$gridRows} * #{$gridGap});
 
@@ -271,6 +271,7 @@ button:active {
   gap: calc($gridGap * 2);
   margin-right: -10vw;
   margin-left: 10vw;
+  
 }
 .inventory-grid-header-wrapper {
   display: flex;
@@ -280,8 +281,9 @@ button:active {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    font-size: 1.3vw;
+    font-size: 0.9vw;
     font-weight: 500;
+    
   }
 }
 
@@ -333,10 +335,12 @@ button:active {
 
 
 .inventory-slot-label-box {
-  color: #fff;
+  background: rgba(110, 110, 110, 0.158);
+  border: 0.1px solid rgba(55, 55, 55, 0.288);
+  color: $textColor;
   text-align: center;
-  border-bottom-left-radius: 0.25vh;
-  border-bottom-right-radius: 0.25vh;
+  border-bottom-left-radius: 0.5rem;
+  border-bottom-right-radius: 0.5rem;
 }
 
 .inventory-slot-label-text {
@@ -344,19 +348,10 @@ button:active {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  padding: 0.124vw 0.258vw;
-  font-weight: 300;
-  text-align: left;
-  font-size: 0.7vw;
-  text-shadow: 0.052vw 0.104vw 0.521vw #ffffff4d,-0.104vw 0.052vw 0.521vw #ffffff37;
-  opacity: 0.9;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  .Xndsu {
-    margin-left: 1vw;
-    font-size: 1vw;
-  }
+  padding: 0.8px 1px;
+  font-weight: small;
+  font-family: "TT Commons";
+  font-size: 12px;
 }
 
 .inventory-slot-number {
@@ -378,7 +373,7 @@ button:active {
   justify-content: space-between;
   height: 100%;
   p {
-    font-size: 0.625vw;
+    font-size: 12px;
   }
 }
 
@@ -386,19 +381,23 @@ button:active {
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
-  font-weight: 600 ;
-  opacity: 0.8;
 }
 
 .item-hotslot-header-wrapper {
   @extend .item-slot-header-wrapper;
   justify-content: space-between !important;
 }
+
 .item-slot-info-wrapper {
-  text-align: center;
-  position: relative;
-  right: 0.3vw;
-  margin-top: 0.2vw;
+  display: flex;
+  flex-direction: row;
+  align-self: flex-end;
+  color: rgb(223, 223, 223);
+  padding: 3px;
+  gap: 4px;
+  p {
+    font-size: 12px;
+  }
 }
 
 .item-slot-currency-wrapper {
@@ -406,9 +405,9 @@ button:active {
   flex-direction: row;
   justify-content: flex-end;
   align-items: center;
-  padding-right: 0.156vw;
+  padding-right: 3px;
   p {
-    font-size: 0.729vw;
+    font-size: 14px;
     text-shadow: 0.1vh 0.1vh 0 rgba(0, 0, 0, 0.7);
   }
 }
@@ -417,13 +416,12 @@ button:active {
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
-  padding-right: 0.156vw;
+  padding-right: 3px;
   p {
-    font-size: 0.729vw;
+    font-size: 14px;
     text-shadow: 0.1vh 0.1vh 0 rgba(0, 0, 0, 0.7);
   }
 }
-
 
 .tooltip-wrapper {
   pointer-events: none;
@@ -433,12 +431,12 @@ button:active {
   flex-direction: column;
   min-width: 200px;
   color:white;
-  font-family: $mainFont;
-  background: rgba(41, 41, 41, 0.712);
+  font-family: "TT Commons";
+  background: rgba(56, 56, 56, 0.822);
   border: 1px solid rgba(55, 55, 55, 1);
   p {
     font-size: 12px;
-    font-weight: 400;
+    font-weight: 600;
   }
 }
 
@@ -448,13 +446,8 @@ button:active {
   justify-content: space-between;
   align-items: center;
   p {
-    font-size: 1.042vw;
+    font-size: 15px;
     font-weight: 400;
-  }
-  aside{
-    margin-left: 6.688vw;
-    font-size: 1.042vw;
-    font-weight: 500;
   }
 }
 
@@ -464,15 +457,15 @@ button:active {
   align-items: center;
   justify-content: center;
   svg {
-    padding-right: 0.156vw;
+    padding-right: 3px;
   }
   p {
-    font-size: 0.729vw;
+    font-size: 14px;
   }
 }
 
 .tooltip-ingredients {
-  padding-top: 0.260vw;
+  padding-top: 5px;
 }
 
 .tooltip-ingredient {
@@ -480,9 +473,9 @@ button:active {
   flex-direction: row;
   align-items: center;
   img {
-    width: 1.458vw;
-    height: 1.458vw;
-    padding-right: 0.260vw;
+    width: 28px;
+    height: 28px;
+    padding-right: 5px;
   }
 }
 
@@ -554,7 +547,7 @@ button:active {
 .weight-bar {
   height: 3.5vh;
   margin-top: -0.5vh;
-  margin-left: 0.2vh;
+  margin-left: 0.3vh;
   overflow: hidden;
 }
 

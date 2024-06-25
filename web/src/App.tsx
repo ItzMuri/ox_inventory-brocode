@@ -21,7 +21,7 @@ debugData([
         id: 'test',
         type: 'player',
         slots: 50,
-        label: 'Kishan Sharma',
+        label: 'Muri',
         weight: 3000,
         maxWeight: 5000,
         items: [

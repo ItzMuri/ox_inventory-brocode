@@ -194,7 +194,10 @@ const InventorySlot: React.ForwardRefRenderFunction<HTMLDivElement, SlotProps> =
                         className="item-slot-price-wrapper"
                         style={{ color: item.currency === 'money' || !item.currency ? '#2ECC71' : '#E74C3C' }}
                       >
-                        <p style={{position:'absolute', marginTop:'0.2vw'}}>
+                        <p style={{
+                          position:'absolute', 
+                          marginTop:'-3.6vw',
+                          }}>
                           {Locale.$ || '$'}
                           {item.price.toLocaleString('en-us')}
                         </p>

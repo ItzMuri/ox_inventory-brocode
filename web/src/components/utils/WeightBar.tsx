@@ -52,7 +52,7 @@ const WeightBar: React.FC<{ percent: number; durability?: boolean, strokesize: n
         pathTransition: 'stroke-dashoffset 0.5s ease 0s',
         // Colors
         pathColor: durability ? colorr : color,
-        trailColor: 'grey',
+        trailColor: 'rgba(56, 56, 56, 0.822)',
       })}
       className={durability ? 'durability-bar' : 'weight-bar'}
       value={percent}
@@ -67,9 +67,9 @@ const WeightBar: React.FC<{ percent: number; durability?: boolean, strokesize: n
 
             }
             : {
-              fontSize: '0.7vw',
-              marginLeft: '0.25vw',
-              marginTop: '0.4vw',
+              fontSize: '0.5vw',
+              marginLeft: '0.15vw',
+              marginTop: '0.5vw',
               animationDuration: '3s',
             }
         }
