@@ -1,5 +1,3 @@
-edit of  RazerGhost
-https://github.com/RazerGhost/ox_inventory
 
 you have to build to use this
 - cd ox_inventory/web
